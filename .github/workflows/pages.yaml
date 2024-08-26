@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ${{ env.TF_ACTIONS_WORKING_DIR }}
+        working-directory: $env.TF_ACTIONS_WORKING_DIR
 
     # permissions:
     #   pull-requests: write
