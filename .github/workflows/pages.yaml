@@ -1,3 +1,11 @@
+on:
+  push:
+    # branches: [ "main" ]
+    # Publish semver tags as releases.
+    tags: [ '*.*.*' ]
+  pull_request:
+    # branches: [ "main" ]
+
 defaults:
   run:
     working-directory: ${{ env.tf_actions_working_dir }}
