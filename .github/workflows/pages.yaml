@@ -7,7 +7,7 @@ on:
     # branches: [ "main" ]
 
 
-  
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ${{ env.tf_actions_working_dir }}
+        working-directory: ${{ env.TF_ACTIONS_WORKING_DIR }}
 
     # permissions:
     #   pull-requests: write
