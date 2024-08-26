@@ -1,0 +1,4 @@
+steps:
+- uses: opentofu/setup-opentofu@v1
+  with:
+    tofu_version: secrets.OPEN_TOFU_VER
