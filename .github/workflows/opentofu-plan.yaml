@@ -5,5 +5,5 @@ on:
 
 jobs:
   opentofu:
-    uses: dnogu/ActionCI/.github/workflows/opentofu-plan.yaml@7525caaf94967be546fc30bccf5d47f6f524726e
+    uses: dnogu/ActionCI/.github/workflows/opentofu-plan.yaml@609855ed015a33f93405c27b7d08f413cc184e07
     secrets: inherit
