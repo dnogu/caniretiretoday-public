@@ -1,7 +1,6 @@
 on:
   pull_request:
-    # only trigger on branches, not on tags
-    branches: 'main'
+    branches: '*'
 
 jobs:
   opentofu:
