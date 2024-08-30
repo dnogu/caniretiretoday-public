@@ -6,3 +6,6 @@ jobs:
   opentofu:
     uses: dnogu/ActionCI/.github/workflows/opentofu-plan.yaml@609855ed015a33f93405c27b7d08f413cc184e07
     secrets: inherit
+    with:
+      TF_ACTIONS_WORKING_DIR: ${{vars.TF_ACTIONS_WORKING_DIR}}
+      OPEN_TOFU_VER: ${{vars.OPEN_TOFU_VER}}
