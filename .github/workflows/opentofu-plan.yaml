@@ -3,9 +3,20 @@ on:
     branches: '*'
 
 jobs:
-  opentofu:
-    uses: dnogu/ActionCI/.github/workflows/opentofu-plan.yaml@609855ed015a33f93405c27b7d08f413cc184e07
-    secrets: inherit
-    with:
-      TF_ACTIONS_WORKING_DIR: ${{ vars.TF_ACTIONS_WORKING_DIR }}
-      OPEN_TOFU_VER: ${{ vars.OPEN_TOFU_VER }}
+  print:
+    runs-on: ubuntu-latest
+    outputs:
+      some_var: ${{ vars.TF_ACTIONS_WORKING_DIR }}
+      another_var: ${{ vars.OPEN_TOFU_VER  }}   
+    steps:
+      - name: Print inputs passed to the reusable workflow
+        id: step1
+        run: |
+          echo "some var: $SOME_VAR"
+          echo "some_var=$SOME_VAR" >> $GITHUB_OUTPUT"
+  # opentofu:
+  #   uses: dnogu/ActionCI/.github/workflows/opentofu-plan.yaml@609855ed015a33f93405c27b7d08f413cc184e07
+  #   secrets: inherit
+  #   with:
+  #     TF_ACTIONS_WORKING_DIR: ${{ vars.TF_ACTIONS_WORKING_DIR }}
+  #     OPEN_TOFU_VER: ${{ vars.OPEN_TOFU_VER }}
